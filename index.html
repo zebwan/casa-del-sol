@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Casa Del Sol — Mexican Kitchen</title>
+  <meta name="description" content="Casa Del Sol serves modern Mexican classics, fast & fresh. Tacos, bowls and grill." />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav" style="position:relative">
+      <div class="brand">
+        <!-- Small logo -->
+        <div class="badge" aria-hidden="true">
+          <img src="images/logo1.png" alt="Casa Del Sol logo" width="40" height="40"
+               style="width:100%;height:100%;object-fit:contain" decoding="async">
+        </div>
+        <span>Casa Del Sol</span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right actions -->
+      <div style="display:flex;align-items:center;gap:10px;position:relative">
+        <!-- Search icon (textbox pops only on click) -->
+        <button id="searchToggle" aria-label="Search"
+                style="display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:12px;background:#fff;border:1px solid #f0e2cf;box-shadow:var(--shadow);cursor:pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M15.5 14h-.79l-.28-.27a6.471 6.471 0 0 0 1.57-4.23A6.5 6.5 0 1 0 9.5 16a6.47 6.47 0 0 0 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM9.5 14C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+          </svg>
+        </button>
+
+        <!-- Cart -->
+        <a href="#cart" aria-label="Cart" title="Cart"
+           style="position:relative; display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:12px; background:#fff; border:1px solid #f0e2cf; box-shadow:var(--shadow)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M7 4h-2l-1 2v2h2l3.6 7.59-1.35 2.44A1 1 0 0 0 9.1 20H19v-2H9.42l.93-1.68h6.55a1 1 0 0 0 .92-.62L21 9H7.42l-.75-1.5L7 6h12V4H7zM7 22a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm10 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+          </svg>
+          <span id="cartCount" style="position:absolute; top:-6px; right:-6px; background:var(--brand); color:#fff; font-weight:800; font-size:11px; padding:2px 6px; border-radius:999px;">0</span>
+        </a>
+
+        <!-- Hidden search popover -->
+        <form id="searchForm" class="search"
+              style="display:none; position:absolute; top:52px; right:0; box-shadow:var(--shadow);">
+          <input type="search" id="q" placeholder="Search site…" aria-label="Search">
+          <button type="submit" aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M15.5 14h-.79l-.28-.27a6.471 6.471 0 0 0 1.57-4.23A6.5 6.5 0 1 0 9.5 16a6.47 6.47 0 0 0 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+
+    <div class="container" style="display:grid; grid-template-columns:1.05fr .95fr; gap:48px; align-items:center;">
+
+      <!-- Left copy -->
+      <div>
+        <h1>Fresh & Flavorful Mexican Cuisine</h1>
+        <p>Experience our tacos, bowls, and quesadillas made with love and fresh ingredients.</p>
+        <a href="#menu" class="btn btn-primary">View Menu</a>
+        <a href="about.html" class="btn btn-ghost">About Us</a>
+      </div>
+
+      <!-- Right floating images with more spacing -->
+      <!-- Right floating images (no white background) -->
+<div class="hero-art" aria-hidden="true">
+  <img class="float-food float-1" src="images/tacosbg.png" alt="" loading="lazy">
+  <img class="float-food float-2" src="images/quesadillabg.png" alt="" loading="lazy">
+  <img class="float-food float-3" src="images/nachosbg.png" alt="" loading="lazy">
+</div>
+
+    </div>
+  </section>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="how">
+  <div class="container how-panel">
+    <p class="eyebrow center" style="color:var(--brand-dark); text-transform:uppercase; letter-spacing:.12em; font-weight:800;">How it works</p>
+    <h2 class="section-title center">What We Serve</h2>
+    <p class="section-sub center">
+      Quality comes first—everything is prepared with care and kept halal, from our kitchen to your hands.
+    </p>
+
+    <div class="grid-3" style="margin-top:16px">
+      <article class="feature">
+        <div class="icon-bubble">
+          <img src="images/apporder.png" alt="Order via app or website">
+        </div>
+        <h3>Order In A Tap</h3>
+        <p>Place your order right on the site—quick and fuss-free.</p>
+      </article>
+
+      <article class="feature">
+        <div class="icon-bubble">
+          <img src="images/delivery.png" alt="Fast delivery rider">
+        </div>
+        <h3>Delivered On Time</h3>
+        <p>Your meal reaches you promptly—just when you expect it.</p>
+      </article>
+
+      <article class="feature">
+        <div class="icon-bubble">
+          <img src="images/quality.png" alt="Quality and safety badge">
+        </div>
+        <h3>Quality You Can Trust</h3>
+        <p>We use premium ingredients so every bite tastes great and feels safe.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- POPULAR MENU (first row of 4 cards) -->
+<section id="menu" class="popular">
+  <div class="container popular-panel">
+    <p class="eyebrow">Our menu</p>
+    <h2 class="section-title">Our Popular Menu</h2>
+    <p class="section-sub">Crowd-favorites to get you started — all freshly prepared.</p>
+
+    <!-- 4 feature cards (swap images later) -->
+    <div class="menu-cards">
+      <article class="mcard">
+        <figure><img src="images/tacosalpastor.png" alt="Tacos al Pastor"></figure>
+        <div>
+          <h4>Tacos al Pastor</h4>
+          <p>Marinated chicken with pineapple.</p>
+        </div>
+        <div class="row"><div class="price">RM17.90</div><button class="fav" aria-label="Save">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.35-9.33-8.09C.91 10.07 2.35 6.5 6.2 6.5c2.01 0 3.17 1.3 3.8 2.23.63-.93 1.79-2.23 3.8-2.23 3.85 0 5.29 3.57 3.53 6.41C19 16.65 12 21 12 21z"/></svg>
+        </button></div>
+      </article>
+
+      <article class="mcard">
+        <figure><img src="images/flautas.png" alt="Flautas"></figure>
+        <div>
+          <h4>Flautas</h4>
+          <p>Crispy rolled tortillas with chicken or beef.</p>
+        </div>
+        <div class="row"><div class="price">RM14.90</div><button class="fav" aria-label="Save">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.35-9.33-8.09C.91 10.07 2.35 6.5 6.2 6.5c2.01 0 3.17 1.3 3.8 2.23.63-.93 1.79-2.23 3.8-2.23 3.85 0 5.29 3.57 3.53 6.41C19 16.65 12 21 12 21z"/></svg>
+        </button></div>
+      </article>
+
+      <article class="mcard">
+        <figure><img src="images/pozole.png" alt="Pozole Rojo"></figure>
+        <div>
+          <h4>Pozole Rojo</h4>
+          <p>Hominy soup with tender beef.</p>
+        </div>
+        <div class="row"><div class="price">RM19.90</div><button class="fav" aria-label="Save">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.35-9.33-8.09C.91 10.07 2.35 6.5 6.2 6.5c2.01 0 3.17 1.3 3.8 2.23.63-.93 1.79-2.23 3.8-2.23 3.85 0 5.29 3.57 3.53 6.41C19 16.65 12 21 12 21z"/></svg>
+        </button></div>
+      </article>
+
+      <article class="mcard">
+        <figure><img src="images/tamales.png" alt="Tamales"></figure>
+        <div>
+          <h4>Tamales</h4>
+          <p>Steamed masa parcels with fillings.</p>
+        </div>
+        <div class="row"><div class="price">RM12.90</div><button class="fav" aria-label="Save">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.35-9.33-8.09C.91 10.07 2.35 6.5 6.2 6.5c2.01 0 3.17 1.3 3.8 2.23.63-.93 1.79-2.23 3.8-2.23 3.85 0 5.29 3.57 3.53 6.41C19 16.65 12 21 12 21z"/></svg>
+        </button></div>
+      </article>
+    </div>
+
+    <!-- Centered reveal button -->
+    <p class="center">
+      <a href="#more-menu" id="moreMenuBtn" class="more-btn" role="button" aria-expanded="false">More Menu</a>
+    </p>
+
+    <!-- HIDDEN: full menu by category; revealed on click -->
+    <div id="more-menu" class="menu-cats" hidden>
+      <!-- 1. From the Grill 🔥 -->
+      <div class="menu-cat" id="grill">
+        <div class="head">
+          <div>
+            <div class="title">From the Grill 🔥</div>
+            <div class="note">(Grilled, roasted, or crispy-fried dishes)</div>
+          </div>
+          <div class="total"></div>
+        </div>
+        <div class="dish"><div class="name">Tacos al Pastor</div><div class="price">RM17.90</div><div class="meta desc">Marinated chicken with pineapple.</div></div>
+        <div class="dish"><div class="name">Carnitas</div><div class="price">RM18.90</div><div class="meta desc">Crispy shredded beef.</div></div>
+        <div class="dish"><div class="name">Chiles Rellenos</div><div class="price">RM16.90</div><div class="meta desc">Roasted peppers with cheese or meat.</div></div>
+      </div>
+
+      <!-- 2. Street Favorites 🚚 -->
+      <div class="menu-cat" id="street">
+        <div class="head">
+          <div>
+            <div class="title">Street Favorites 🚚</div>
+            <div class="note">(Foods you’d find from authentic Mexican street vendors)</div>
+          </div>
+          <div class="total"></div>
+        </div>
+        <div class="dish"><div class="name">Flautas</div><div class="price">RM14.90</div><div class="meta desc">Crispy rolled tortillas with chicken or beef.</div></div>
+        <div class="dish"><div class="name">Sopes</div><div class="price">RM12.90</div><div class="meta desc">Thick masa cakes with toppings.</div></div>
+      </div>
+
+      <!-- 3. Comfort Bowls 🍲 -->
+      <div class="menu-cat" id="bowls">
+        <div class="head">
+          <div>
+            <div class="title">Comfort Bowls 🍲</div>
+            <div class="note">(Hearty, cozy dishes best served in bowls)</div>
+          </div>
+          <div class="total"></div>
+        </div>
+        <div class="dish"><div class="name">Pozole Rojo</div><div class="price">RM19.90</div><div class="meta desc">Hominy soup with chicken.</div></div>
+        <div class="dish"><div class="name">Mole Poblano</div><div class="price">RM20.90</div><div class="meta desc">Chicken in rich chocolate-spice sauce.</div></div>
+      </div>
+
+      <!-- 4. Masa Creations 🌽 -->
+      <div class="menu-cat" id="masa">
+        <div class="head">
+          <div>
+            <div class="title">Masa Creations 🌽</div>
+            <div class="note">(Dishes made from traditional corn dough)</div>
+          </div>
+          <div class="total"></div>
+        </div>
+        <div class="dish"><div class="name">Tamales</div><div class="price">RM12.90</div><div class="meta desc">Steamed masa parcels with fillings.</div></div>
+        <div class="dish"><div class="name">Enchiladas Verdes</div><div class="price">RM15.90</div><div class="meta desc">Rolled tortillas in green tomatillo sauce.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- FOUR CATEGORY SECTIONS -->
+    <div class="menu-cats">
+      <!-- 1. From the Grill -->
+      <div class="menu-cat" id="grill">
+        <div class="head">
+          <div>
+            <div class="title">From the Grill 🔥</div>
+            <div class="note">(Grilled, roasted, or crispy-fried dishes)</div>
+          </div>
+          <div class="total"></div>
+        </div>
+        <div class="dish">
+          <div class="name">Tacos al Pastor</div>
+          <div class="price">RM17.90</div>
+          <div class="meta desc">Marinated chicken with pineapple.</div>
+        </div>
+        <div class="dish">
+          <div class="name">Carnitas</div>
+          <div class="price">RM18.90</div>
+          <div class="meta desc">Crispy shredded beef.</div>
+        </div>
+        <div class="dish">
+          <div class="name">Chiles Rellenos</div>
+          <div class="price">RM16.90</div>
+          <div class="meta desc">Roasted peppers with cheese or meat.</div>
+        </div>
+      </div>
+
+      <!-- 2. Street Favorites -->
+      <div class="menu-cat" id="street">
+        <div class="head">
+          <div>
+            <div class="title">Street Favorites 🚚</div>
+            <div class="note">(Foods you’d find from authentic Mexican street vendors)</div>
+          </div>
+          <div class="total"></div>
+        </div>
+        <div class="dish">
+          <div class="name">Flautas</div>
+          <div class="price">RM14.90</div>
+          <div class="meta desc">Crispy rolled tortillas with chicken or beef.</div>
+        </div>
+        <div class="dish">
+          <div class="name">Sopes</div>
+          <div class="price">RM12.90</div>
+          <div class="meta desc">Thick masa cakes with toppings.</div>
+        </div>
+      </div>
+
+      <!-- 3. Comfort Bowls -->
+      <div class="menu-cat" id="bowls">
+        <div class="head">
+          <div>
+            <div class="title">Comfort Bowls 🍲</div>
+            <div class="note">(Hearty, cozy dishes best served in bowls)</div>
+          </div>
+          <div class="total">Total: 2</div>
+        </div>
+        <div class="dish">
+          <div class="name">Pozole Rojo</div>
+          <div class="price">RM19.90</div>
+          <div class="meta desc">Hominy soup with chicken .</div>
+        </div>
+        <div class="dish">
+          <div class="name">Mole Poblano</div>
+          <div class="price">RM20.90</div>
+          <div class="meta desc">Chicken in rich chocolate-spice sauce.</div>
+        </div>
+      </div>
+
+      <!-- 4. Masa Creations -->
+      <div class="menu-cat" id="masa">
+        <div class="head">
+          <div>
+            <div class="title">Masa Creations 🌽</div>
+            <div class="note">(Dishes made from traditional corn dough)</div>
+          </div>
+          <div class="total"></div>
+        </div>
+        <div class="dish">
+          <div class="name">Tamales</div>
+          <div class="price">RM12.90</div>
+          <div class="meta desc">Steamed masa parcels with fillings.</div>
+        </div>
+        <div class="dish">
+          <div class="name">Enchiladas Verdes</div>
+          <div class="price">RM15.90</div>
+          <div class="meta desc">Rolled tortillas in green tomatillo sauce.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container testi-grid">
+
+    <!-- Left: photo collage (replace images later) -->
+    <div class="collage">
+      <figure class="photo big"><img src="images/dishes.png" alt="Dishes on table"></figure>
+      <figure class="photo sm1"><img src="images/mexicanfood.jpg" alt="Bowl close-up"></figure>
+      <figure class="photo sm2"><img src="images/review.png" alt="Street food selection"></figure>
+    </div>
+
+    <!-- Right: heading + cards -->
+    <div>
+      <p class="testi-eyebrow">What they say</p>
+      <h2 class="testi-title">What Our Customers Say<br>About Us</h2>
+
+      <div class="t-cards">
+        <!-- Card 1 -->
+        <article class="t-card">
+          <div class="t-row">
+            <div class="avatar" aria-hidden="true">
+              <!-- person icon -->
+              <svg viewBox="0 0 24 24"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-5 0-9 3-9 6v2h18v-2c0-3-4-6-9-6z"/></svg>
+            </div>
+            <div class="name">Azlan</div>
+            <div class="stars" aria-label="Rated 5 out of 5">
+              <!-- 5 stars -->
+              <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.73 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.76 1.64 7.03z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.73 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.76 1.64 7.03z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.73 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.76 1.64 7.03z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.73 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.76 1.64 7.03z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.73 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.76 1.64 7.03z"/></svg>
+            </div>
+          </div>
+          <p>“Flavor on point and super friendly service. My go-to for a hearty meal.”</p>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="t-card">
+          <div class="t-row">
+            <div class="avatar" aria-hidden="true">
+              <!-- woman icon -->
+              <svg viewBox="0 0 24 24"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-3.87 0-7 2.24-7 5v3h14v-3c0-2.76-3.13-5-7-5z"/></svg>
+            </div>
+            <div class="name">Maya</div>
+            <div class="stars" aria-label="Rated 4.5 out of 5">
+              <!-- 4 full + 1 half -->
+              <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.73 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.76 1.64 7.03z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.73 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.76 1.64 7.03z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.73 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.76 1.64 7.03z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.73 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.76 1.64 7.03z"/></svg>
+              <!-- half star -->
+              <svg viewBox="0 0 24 24"><defs><linearGradient id="half"><stop offset="50%" stop-color="#ffb21a"/><stop offset="50%" stop-color="transparent"/></linearGradient></defs><path d="M12 17.3l-6.18 3.73 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.76 1.64 7.03z" fill="url(#half)"/></svg>
+            </div>
+          </div>
+          <p>“Consistent quality and generous portions. Delivery is always on time.”</p>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="t-card">
+          <div class="t-row">
+            <div class="avatar" aria-hidden="true">
+              <!-- older man / uncle vibe (same icon works) -->
+              <svg viewBox="0 0 24 24"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-5 0-9 3-9 6v2h18v-2c0-3-4-6-9-6z"/></svg>
+            </div>
+            <div class="name">Uncle Rahim</div>
+            <div class="stars" aria-label="Rated 5 out of 5">
+              <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.73 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.76 1.64 7.03z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.73 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.76 1.64 7.03z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.73 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.76 1.64 7.03z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.73 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.76 1.64 7.03z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.73 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.76 1.64 7.03z"/></svg>
+            </div>
+          </div>
+          <p>“Feels like home cooking with a modern touch. Highly recommended.”</p>
+        </article>
+      </div>
+
+      <!-- Dots (static to match the look) -->
+      <div class="t-dots" aria-hidden="true">
+        <span class="t-dot is-active"></span>
+        <span class="t-dot"></span>
+        <span class="t-dot"></span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer class="site-footer" id="contact">
+  <!-- small orange “bubbles” like the reference -->
+  <span class="accent a1" aria-hidden="true"></span>
+  <span class="accent a2" aria-hidden="true"></span>
+
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Brand + address + socials -->
+      <div class="footer-brand">
+        <div class="brandline">
+          <div class="badge" aria-hidden="true" style="width:40px;height:40px;">
+            <img src="images/logo1.png" alt="Casa Del Sol logo" style="width:100%;height:100%;object-fit:contain">
+          </div>
+          <span>Casa Del Sol</span>
+        </div>
+        <p>Bandar Sunway, Selangor</p>
+        <div class="socials">
+          <!-- Instagram -->
+          <a class="sbtn" href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zm5.25-2.75a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/>
+            </svg>
+          </a>
+          <!-- Facebook -->
+          <a class="sbtn" href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M13 22v-8h3l1-4h-4V8a1 1 0 0 1 1-1h3V3h-3a5 5 0 0 0-5 5v2H6v4h3v8z"/>
+            </svg>
+          </a>
+          <!-- Twitter/X -->
+          <a class="sbtn" href="#" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M4 4l7.3 9.1L4 20h2.3l6-6.8L16.5 20H20l-7.5-9.7L20 4h-2.3l-5.5 6.2L7.5 4z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Company -->
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#home">Career</a></li>
+          <li><a href="#how">How It Works</a></li>
+        </ul>
+      </div>
+
+      <!-- Policy -->
+      <div class="footer-col">
+        <h4>Policy</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Shipping</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h4>Get In Touch</h4>
+        <ul>
+          <li>+60 13-000-0000</li>
+          <li>hello@casadelsol.com</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="foot-divider">
+
+    <div class="foot-bottom">
+      © <span id="y"></span> Casa Del Sol. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+  <script>
+  // Footer year
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  // Toggle search popover
+  const pop = document.getElementById('searchForm');
+  const toggle = document.getElementById('searchToggle');
+  const input = document.getElementById('q');
+
+  function openSearch() {
+    pop.style.display = 'flex';
+    setTimeout(() => input && input.focus(), 50);
+  }
+  function closeSearch() { pop.style.display = 'none'; }
+
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    const isOpen = pop.style.display !== 'none' && pop.style.display !== '';
+    isOpen ? closeSearch() : openSearch();
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeSearch(); });
+  document.addEventListener('click', (e) => {
+    if (!pop.contains(e.target) && !toggle.contains(e.target)) closeSearch();
+  });
+
+  // Simple in-page search filter
+  pop.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const term = (input.value || '').toLowerCase().trim();
+    const blocks = document.querySelectorAll('section, article.item, .card');
+    if (!term) { blocks.forEach(el => el.style.display = ''); return; }
+    blocks.forEach(el => el.style.display = el.textContent.toLowerCase().includes(term) ? '' : 'none');
+    closeSearch();
+  });
+
+  // Cart count placeholder
+  const cartCount = document.getElementById('cartCount');
+  cartCount.textContent = cartCount.textContent || '0';
+
+  // ===== More Menu: ensure hidden on load; toggle with class =====
+  (function () {
+    const btn = document.getElementById('moreMenuBtn');
+    const panel = document.getElementById('more-menu');
+    if (!btn || !panel) return;
+
+    // Force initial hidden state
+    panel.classList.remove('is-open');
+    panel.setAttribute('hidden', '');
+    btn.setAttribute('aria-expanded', 'false');
+
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const opening = !panel.classList.contains('is-open');
+
+      if (opening) {
+        panel.classList.add('is-open');
+        panel.removeAttribute('hidden');
+        btn.textContent = 'Show Less';
+        btn.setAttribute('aria-expanded', 'true');
+        panel.classList.add('reveal-enter'); // optional animation if you added it
+        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        panel.classList.remove('is-open');
+        panel.setAttribute('hidden', '');
+        btn.textContent = 'More Menu';
+        btn.setAttribute('aria-expanded', 'false');
+        const section = btn.closest('section');
+        if (section) window.scrollTo({ top: section.offsetTop - 24, behavior: 'smooth' });
+      }
+    });
+  })();
+</script>
+
+
+</body>
+</html>
